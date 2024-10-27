@@ -1,4 +1,10 @@
-//HTML elements contain attributes. Here's the complete list. Source: 
+//HTML elements contain attributes. Here's the complete list. Source: https://www.w3schools.com/TAGS/att_href.asp
+// When looking for values of HTML attributes, search for them according to the following order of priority:
+
+1. id
+2. name
+3. class
+
 Attribute	                    Belongs to	            Description
 accept	                        <input>	                Specifies the types of files that the server accepts (only for type="file")
 accept-charset	                <form>	                Specifies the character encodings that are to be used for the form submission
