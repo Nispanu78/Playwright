@@ -1,0 +1,25 @@
+To open codegen
+
+npx playwright codegen
+
+//Functioning:
+
+Codegen will open a browser and the playwright inspector. Whatever the actions that we are doing on the browser, the playwright inspector will convert into a test written inspector
+typescript code
+
+To test it use this demo website: https://demo-m2.bird.eu/home
+
+//To get help run this command
+npx playwright codegen --help
+
+//To open codegen in a different browser (default is firefox)
+npx playwright codegen --browser firefox
+
+//To say to playright to output the code it automatically generates to a specific file use:
+npx playwright codegen -o ./tests/automatically_generated_code_from_codegen.spec.ts
+
+//To run the test using a specific viewport use (this will open the browser with a specific viewsize):
+npx playwright codegen --viewport-size=800,600
+
+//To run the test using a specific mobile device, use:
+npx playwright codegen --device="iPhone 11 Pro"

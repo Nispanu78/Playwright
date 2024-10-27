@@ -1,0 +1,17 @@
+To install typescript:
+
+1. Check that node and npm are installed:
+
+node -v
+
+npm -v
+
+2. Install typescript
+
+npm install -g typescript
+
+npm install -g ts-node
+
+3. Initialize the configuration file:
+
+tsc --init

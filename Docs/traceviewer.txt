@@ -1,0 +1,49 @@
+//Traceviewer is a GUI tool that makes the executed tests be viewable along with snapshots, timelines etc. called traces,
+// whose function is to trace the execution of the tests.
+
+//To enable traceviewer go to playright.config.js and search for "trace" key
+
+//Example:
+trace: 'on-first-retry',
+
+//The code means that the trace become active when the test will be retried for the first time
+
+//In order to tell playwright to retry the test another time if it fails, in playright.config.js comment out the following line of code
+
+  //retries: process.env.CI ? 2 : 0,
+
+//under
+/* Retry on CI only */
+
+//Then add
+//retries:1,
+
+
+//To decrease the time that playwright will wait before failing the test, go to the following section of playright.config.js and add the following key:value playright
+//timeout:5
+
+//Example:
+
+module.exports = defineConfig({
+  timeout:5*1000 
+  testDir: './tests',
+
+
+//To open traceviewer:
+
+1. Go to the report, scroll to the bottom where subsection called "Traces" is present and click on the picture of the trace
+2. Download the zip file containing the trace by clicking on it
+2a. For opening the trace from the command line use:
+npx playwright show-trace test-results/first_failed_test_to_learn_tracing-test-chromium-retry1/trace.zip
+3. Go to the browser and enter trace.playwright.dev and upload the zip file to it
+
+
+//To configure traceviewer, go to playright.config.js and keeping right-CTRL pressed, click on "trace". Options are the following:
+
+   * - `'off'`: Do not record trace.
+   * - `'on'`: Record trace for each test. (this will record a trace whether the test passes or fails)
+   * - `'on-first-retry'`: Record trace only when retrying a test for the first time.
+   * - `'on-all-retries'`: Record trace only when retrying a test.
+   * - `'retain-on-failure'`: Record trace for each test. When test run passes, remove the recorded trace.
+   * - `'retain-on-first-failure'`: Record trace for the first run of each test, but not for retries. When test run
+   *   passes, remove the recorded trace.

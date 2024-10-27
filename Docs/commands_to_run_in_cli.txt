@@ -1,0 +1,43 @@
+//  Commands from command line
+
+    //To run the test: npx playwright test
+    //This command will run all tests in the "tests" folders and in all browsers
+    
+    //npx playwright test --workers 3 (this command will assign 3 workers/individual test session/specific test files and make them run in parallel)
+
+
+    //To run a specific test when there is more than one the command is: 
+    //npx playwright test + copy relative path from the IDE and past it in the CLI but change backslash into slash
+    //Example:
+    //npx playwright test tests/firstTest.spec.ts
+    
+
+    //To run multiple spec files in one shot use: 
+    //npx playwright test firstTest.spec.ts thirdTest.spec.ts
+
+
+    //To run test files giving just some elements of the file mame, not the whole file name use:
+    //npx playwright test firstTest thirdTest
+
+
+    //To run the test giving the name of the function instead of the name of the file use:
+    //npx playwright test -g 'My second test'
+
+    //To run all tests that use a specific browser, use:
+    //npx playwright test --project=chromium
+
+    //To run the test in headed mode use:
+    //npx playwright test --headed
+
+    //To run tests in debug mode use:
+    //npx playwright test --project=chromium --debug
+
+    //To combine different modes to run the files use:
+    //npx playwright test thirdTest.spec.ts --project=chromium --headed
+
+    //To set tracevalues from the command line
+    // To turn on the trace for all the test use:
+    npx playwright test --trace on 
+    // To turn off the trace for all the test use:
+    npx playwright test --trace off
+    // The same applies to all the possible configurations trace may have as shown in the configuration file 
