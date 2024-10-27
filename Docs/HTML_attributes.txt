@@ -1,9 +1,12 @@
 //HTML elements contain attributes. Here's the complete list. Source: https://www.w3schools.com/TAGS/att_href.asp
 // When looking for values of HTML attributes, search for them according to the following order of priority:
 
-1. id
+1. id (in dev tools search functionality give #id_value)
 2. name
 3. class
+4. CSS (in the search functionality in dev tools, look for CSS attributes with the following syntax [name="user-name"])
+5. XPATH (open the dev tools, go to the 'Elements" tab and in the DOM, right-click on element to inspect, then click on "Copy"
+ and choose either "Copy XPath" or "Copy full XPATH). Example: //*[@id="maincontent"]/div[3]/div/input[2]
 
 Attribute	                    Belongs to	            Description
 accept	                        <input>	                Specifies the types of files that the server accepts (only for type="file")
