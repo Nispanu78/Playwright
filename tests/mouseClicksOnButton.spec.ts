@@ -26,6 +26,7 @@ test('rightClicksonButton', async({page})=>{
     //Testing right-click on button
     await page.locator('#click_area').click({button:'right'})
     //We assert that the specified text is displayed
+    //If test is too fast use await page.pause() and use the playwright inspector to run the test in steps
     await expect(page.locator('#click_type')).toHaveText('Right-Click')
     await page.close();
     
