@@ -16,7 +16,7 @@ let x = 4
 let y = 7
 
 let isEqual = x == y; // check wheter the variable's values are equal
-let isStrictlyEquale = x === y; // check whether both the variable's value and the data types are equal
+let isStrictlyEqual = x === y; // check whether both the variable's value and the data types are equal
 let isNotEqual = x != y;
 let isGreaterThan = x > y;
 let isLessThan = x < y;
