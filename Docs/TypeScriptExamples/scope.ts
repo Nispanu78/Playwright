@@ -20,7 +20,7 @@ function random2() {
     console.log(globalVar);
 }
 
-//Block scope concerns variable declared using let or const inside a block like a if statement or a for loop will have block scope. 
+//Block scope concerns variables declared using let or const inside a block like a if statement or a for loop. 
 //They are only accessible within the block in which they are declared
 
 if(true) {
