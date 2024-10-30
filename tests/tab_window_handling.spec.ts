@@ -52,7 +52,7 @@ import {test} from '@playwright/test'
 //     await newWindow.close();
 // })
 
-//How to handle multiple tabls
+//How to handle multiple tabs:
 
 test ('Multiple Windows handling', async({page})=>{
     await page.goto('https://demo.automationtesting.in/Windows.html')
