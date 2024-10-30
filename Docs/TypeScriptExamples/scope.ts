@@ -1,6 +1,6 @@
 //Scope refers to the context in which the variable is declared. There are three types of scope: Global Scope, Local Scope, and Block Scope
 
-//Global scope concerns variables declared outside of any function or code blocks have global scope. They are accessible anywhere in the program.
+//Global scope concerns variables declared outside of any function or code blocks. They are accessible anywhere in the program.
 
 // Example
 
