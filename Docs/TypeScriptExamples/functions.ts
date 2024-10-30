@@ -13,7 +13,7 @@
 //How to pass parameters and return types to a function. We need to define the type of both the parameters "calculateTotal(x:number, y:number)" and of the return statement ": number"
 //In the case of the function below, all parameters are mandatory and the function needs to be called with the same number of arguments as are parameters
 
-function calculateTotal(x:number, y:number): number{
+function calculateTotal(x:number, y:number) {
     return x * y;
 }
 
