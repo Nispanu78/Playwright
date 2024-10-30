@@ -50,6 +50,6 @@ console.log(multiply)
 //OR, how to create a base type function, which is a template for creating objects
 
 let e = 2;
-let f = 3
+let f = 3;
 type matchOperation = (a:number,b:number) => number
 const addNew:matchOperation = (e, f) => e+f;
