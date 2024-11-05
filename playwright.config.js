@@ -31,11 +31,16 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    //To take screenshots use the following configuration
+    screenshot:'only-on-failure',
+    //To take a video use the following configuration
+    video:'retain-on-failure',
     /* Run or not the test in headless mode */
     headless:false
   },
   //Here we see how to add the tag "@smoke" to the config.js file. Use grepInvert to run all tests except those specified in the regular expression
-  grep:[new RegExp("@smoke"), new RegExp("@regression")],
+  //Please consider that with the grep function active, you will not be able to run other tests other than the grepped ones
+  // grep:[new RegExp("@smoke"), new RegExp("@regression")],
 
   /* Configure projects for major browsers */
   projects: [
