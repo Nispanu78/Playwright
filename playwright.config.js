@@ -34,6 +34,8 @@ module.exports = defineConfig({
     /* Run or not the test in headless mode */
     headless:false
   },
+  //Here we see how to add the tag "@smoke" to the config.js file. Use grepInvert to run all tests except those specified in the regular expression
+  grep:[new RegExp("@smoke"), new RegExp("@regression")],
 
   /* Configure projects for major browsers */
   projects: [
