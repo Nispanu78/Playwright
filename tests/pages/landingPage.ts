@@ -1,8 +1,8 @@
 import {Locator, Page} from '@playwright/test'
 
 export class LandingPage{
-    readonly page:Page;
-    readonly loginButton:Locator;
+    private readonly page:Page;
+    private readonly loginButton:Locator;
 
     constructor(page:Page) {
         this.loginButton = page.locator('button[type="submit"]')

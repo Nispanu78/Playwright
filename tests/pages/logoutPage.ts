@@ -1,9 +1,9 @@
 import {Locator, Page} from '@playwright/test'
 
 export class LogOut{
-    readonly page:Page;
-    readonly logoutButton:Locator;
-    readonly pressLogoutButton:Locator
+    private readonly page:Page;
+    private readonly logoutButton:Locator;
+    private readonly pressLogoutButton:Locator
 
     constructor(page:Page) {
         this.logoutButton = page.locator('.oxd-icon.bi-caret-down-fill.oxd-userdropdown-icon');

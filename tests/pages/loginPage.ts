@@ -1,10 +1,10 @@
 import {Locator, Page} from '@playwright/test'
 
 export class LoginPage{
-    readonly page:Page;
-    readonly usernameTextBox:Locator;
-    readonly passwordTextBox:Locator;
-    readonly loginButton:Locator;
+    private readonly page:Page;
+    private readonly usernameTextBox:Locator;
+    private readonly passwordTextBox:Locator;
+    private readonly loginButton:Locator;
 
     constructor(page:Page) {
         this.usernameTextBox = page.locator('input[placeholder="Username"]');
