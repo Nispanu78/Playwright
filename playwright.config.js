@@ -23,7 +23,25 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //Listed below are the types of reporters that can be used
+  // reporter: 'html',
+  // reporter: 'list',
+  // reporter: 'dot',
+  // reporter: 'line',
+  //To deactivate the reporter use the command below
+  // reporter: 'null',
+  // reporter: [['json',{
+  //   outputFile: 'test-results.json'
+  // }]],
+  // reporter: [['junit',{
+  //   outputFile: 'test-results.xml'
+  // }]],
+  reporter: [['html',{
+    outputFolder: 'my-report',
+    open: 'never',
+    host: '0.0.0.0',
+    port: '9333'
+  }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

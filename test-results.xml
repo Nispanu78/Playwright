@@ -1,0 +1,85 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="67.632836">
+<testsuite name="readDataFromJSON.spec.ts" timestamp="2024-11-09T15:55:48.890Z" hostname="chromium" tests="2" failures="1" skipped="0" time="65.604" errors="0">
+<testcase name="Testing a login form with valid credentials and expecting it to pass" classname="readDataFromJSON.spec.ts" time="5.094">
+</testcase>
+<testcase name="Testing a login form with invalid credentials and expecting it to fail" classname="readDataFromJSON.spec.ts" time="60.51">
+<failure message="readDataFromJSON.spec.ts:18:5 Testing a login form with invalid credentials and expecting it to fail" type="FAILURE">
+<![CDATA[  [chromium] › readDataFromJSON.spec.ts:18:5 › Testing a login form with invalid credentials and expecting it to fail 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]')
+
+
+      21 |     await page.locator('input[placeholder="Password"]').fill(orangeHrmData.invalidPassword);
+      22 |     await page.locator('(//button[normalize-space()="Login"])[1]').click();
+    > 23 |     await page.locator('//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]').click();
+         |                                                                                           ^
+      24 |     await page.locator('text=Logout').click();
+      25 |     await page.close();
+      26 | })
+
+        at C:\Users\menhi\Desktop\Files Nicola\IT Resources\Testing-Continuous integration\Playwright\tests\readDataFromJSON.spec.ts:23:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]')
+
+
+      21 |     await page.locator('input[placeholder="Password"]').fill(orangeHrmData.invalidPassword);
+      22 |     await page.locator('(//button[normalize-space()="Login"])[1]').click();
+    > 23 |     await page.locator('//i[@class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"]').click();
+         |                                                                                           ^
+      24 |     await page.locator('text=Logout').click();
+      25 |     await page.close();
+      26 | })
+
+        at C:\Users\menhi\Desktop\Files Nicola\IT Resources\Testing-Continuous integration\Playwright\tests\readDataFromJSON.spec.ts:23:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|test-results\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

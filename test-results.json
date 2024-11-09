@@ -1,0 +1,219 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\playwright.config.js",
+    "rootDir": "C:/Users/menhi/Desktop/Files Nicola/IT Resources/Testing-Continuous integration/Playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/menhi/Desktop/Files Nicola/IT Resources/Testing-Continuous integration/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/menhi/Desktop/Files Nicola/IT Resources/Testing-Continuous integration/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/menhi/Desktop/Files Nicola/IT Resources/Testing-Continuous integration/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/menhi/Desktop/Files Nicola/IT Resources/Testing-Continuous integration/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "readDataFromJSON.spec.ts",
+      "file": "readDataFromJSON.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Testing a login form with valid credentials and expecting it to pass",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 6622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T15:52:29.633Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d4203039a6238dd8f007-136504faf6c480b16e83",
+          "file": "readDataFromJSON.spec.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "Testing a login form with invalid credentials and expecting it to fail",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30351,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\tests\\readDataFromJSON.spec.ts",
+                        "column": 91,
+                        "line": 23
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('//i[@class=\"oxd-icon bi-caret-down-fill oxd-userdropdown-icon\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Password\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(orangeHrmData\u001b[33m.\u001b[39minvalidPassword)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'(//button[normalize-space()=\"Login\"])[1]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//i[@class=\"oxd-icon bi-caret-down-fill oxd-userdropdown-icon\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Logout'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\tests\\readDataFromJSON.spec.ts:23:91\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-09T15:52:36.562Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\test-results\\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\test-results\\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium\\video.webm"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30512,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\tests\\readDataFromJSON.spec.ts",
+                        "column": 91,
+                        "line": 23
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('//i[@class=\"oxd-icon bi-caret-down-fill oxd-userdropdown-icon\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Password\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(orangeHrmData\u001b[33m.\u001b[39minvalidPassword)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'(//button[normalize-space()=\"Login\"])[1]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//i[@class=\"oxd-icon bi-caret-down-fill oxd-userdropdown-icon\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Logout'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m\n\n\u001b[2m    at C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\tests\\readDataFromJSON.spec.ts:23:91\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2024-11-09T15:53:08.200Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\test-results\\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\test-results\\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\menhi\\Desktop\\Files Nicola\\IT Resources\\Testing-Continuous integration\\Playwright\\test-results\\readDataFromJSON-Testing-a-e6c49-ls-and-expecting-it-to-fail-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4203039a6238dd8f007-fe91b5758defcfc264f8",
+          "file": "readDataFromJSON.spec.ts",
+          "line": 18,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-11-09T15:52:28.644Z",
+    "duration": 70978.35500000001,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
