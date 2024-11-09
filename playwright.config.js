@@ -36,12 +36,14 @@ module.exports = defineConfig({
   // reporter: [['junit',{
   //   outputFile: 'test-results.xml'
   // }]],
-  reporter: [['html',{
-    outputFolder: 'my-report',
-    open: 'never',
-    host: '0.0.0.0',
-    port: '9333'
-  }]],
+  // reporter: [['html',{
+  //   outputFolder: 'my-report',
+  //   open: 'never',
+  //   host: '0.0.0.0',
+  //   port: '9333'
+  // }]],
+  //Here we use both the allure and the HTML report
+  reporter: [['html'],['allure-playwright']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
