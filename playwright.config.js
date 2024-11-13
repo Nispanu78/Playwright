@@ -24,7 +24,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //Listed below are the types of reporters that can be used
-  // reporter: 'html',
+  reporter: 'html',
   // reporter: 'list',
   // reporter: 'dot',
   // reporter: 'line',
@@ -43,7 +43,7 @@ module.exports = defineConfig({
   //   port: '9333'
   // }]],
   //Here we use both the allure and the HTML report
-  reporter: [['html'],['allure-playwright']],
+  // reporter: [['html'],['allure-playwright']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rimraf allure-report allure-results && mkdirp allure-report allure-results",
-    "generate:reports": "allure serve .\\allure-results --clean",
-    "open:reports": "allure open .\\allure-report",
-    "execute:script": "npx playwright test loginTest.spec.ts --project=chromium",
-    "pretest": "npm run clean:reports",
-    "posttest": "npm run generate:reports && npm run open:reports",
-    "test": "npm run execute:script || npm run posttest"
+    "chromium": "npx playwright test loginTest.spec.ts --project=chromium",
+    "firefox": "npx playwright test loginTest.spec.ts --project=firefox",
+    "test:chromium": "npm run chromium",
+    "test:firefox": "npm run firefox"
   },
   "keywords": [],
   "author": "",

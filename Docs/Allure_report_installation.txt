@@ -22,3 +22,21 @@ allure open .\allure-report\
 //To run report automatically with allure install first the following packages
 
 npm install rimraf mkdirp --save-dev
+
+//The current Allure configuration to run tests automatically from playwright.config.js does not work:
+
+//playwright.config.json
+
+  reporter: [['html'],['allure-playwright']],
+
+  //package.json
+
+"scripts": {
+    "clean:reports": "rimraf allure-report allure-results && mkdirp allure-report allure-results",
+    "generate:reports": "allure serve .\\allure-results --clean",
+    "open:reports": "allure open .\\allure-report",
+    "execute:script": "npx playwright test loginTest.spec.ts --project=chromium",
+    "pretest": "npm run clean:reports",
+    "posttest": "npm run generate:reports && npm run open:reports",
+    "test": "npm run execute:script || npm run posttest"
+  },
