@@ -6,13 +6,19 @@ npm i -D allure-commandline
 
 //To get the allure report run:
 
-npx allure generate .\allure-results\ --clean
+allure generate .\allure-results\ --clean
 
-//It seems that allure is not working for me because JAVA is not installed. When giving the command: allure serve C:\Users\menhi\Desktop\Files Nicola\IT Resources\Testing-Continuous integration\Playwright\allure-results
-
-//I get:
+//If you get this error you have to set up a new system variable called JAVA_HOME and giving it the path of your Java installation
 
 ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
 
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation.
+
+//To open the allure report
+
+allure open .\allure-report\ 
+
+//To run report automatically with allure install first the following packages
+
+npm install rimraf mkdirp --save-dev

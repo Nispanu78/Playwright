@@ -43,6 +43,6 @@ test('Slow test with a condition', async({browserName})=>{
 
 //With test.only only one test will be executed
 
-test.only('test.only test', async()=>{
-    console.log('Only this test will get executed');
-})
+// test.only('test.only test', async()=>{
+//     console.log('Only this test will get executed');
+// })

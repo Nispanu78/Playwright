@@ -16,11 +16,11 @@ test('Drag_and_drop', async({page})=>{
     await page.waitForTimeout(5000)
 });
 
-test.only('Easier_drag_and_drop', async({page})=> {
-    await page.goto('http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html');
-    const Washington = page.locator('//div[@id="box3"][text()="Washington"]');
-    //Locator of the element towards which to drag the previous one
-    const UnitedStates = page.locator('//div[@id="box103"][text()="United States"]');
-    await Washington.dragTo(UnitedStates);
-    await page.waitForTimeout(5000)
-})
+// test.only('Easier_drag_and_drop', async({page})=> {
+//     await page.goto('http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html');
+//     const Washington = page.locator('//div[@id="box3"][text()="Washington"]');
+//     //Locator of the element towards which to drag the previous one
+//     const UnitedStates = page.locator('//div[@id="box103"][text()="United States"]');
+//     await Washington.dragTo(UnitedStates);
+//     await page.waitForTimeout(5000)
+// })

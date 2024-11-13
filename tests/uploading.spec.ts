@@ -14,8 +14,8 @@ test('Download a file', async({page})=>{
 
 });
 
-test.only('New approach to download a file', async({page})=>{
-    await page.goto('https://blueimp.github.io/jQuery-File-Upload/');
-    await page.setInputFiles('input[name="files[]"]',['tests/filesToUpload/playwright_1.png']);
-    await page.waitForTimeout(5000)
-})
+// test.only('New approach to download a file', async({page})=>{
+//     await page.goto('https://blueimp.github.io/jQuery-File-Upload/');
+//     await page.setInputFiles('input[name="files[]"]',['tests/filesToUpload/playwright_1.png']);
+//     await page.waitForTimeout(5000)
+// })
